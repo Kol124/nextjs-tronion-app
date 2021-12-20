@@ -69,12 +69,18 @@ const Navigation = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+
+  @media only screen and (max-width: 768px) {
+    ${Button} {
+      margin-left: auto;
+    }
+  }
 `;
 
 const Bars = styled(FaBars)`
   display: none;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 15px;
   fill: ${(p) => p.theme.fontPrimary};
 
   @media only screen and (max-width: 768px) {

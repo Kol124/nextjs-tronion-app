@@ -19,7 +19,7 @@ export default function Tasks() {
     <Layout title="Dashboard | Tasks">
       <DashboardSidebar />
 
-      <TasksCard>
+      <TasksCard className="margin-left">
         <section className="taskItem">
           <ListIcon />
           <Heading className="h4">Follow @Troinion on Twitter</Heading>

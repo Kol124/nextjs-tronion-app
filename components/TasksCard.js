@@ -1,17 +1,12 @@
 import styled from "styled-components";
 
 export const TasksCard = styled.div`
-  margin-left: 30%;
+  margin: 0 auto;
   max-width: 640px;
   border-radius: 20px;
   padding: 2.5rem 2.5rem 3rem;
   border: ${(p) => p.theme.border};
   background: ${(p) => p.theme.backgroundPrimary};
-
-  @media only screen and (max-width: 1024px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   @media only screen and (max-width: 768px) {
     padding: 2rem 1.5rem 2rem;

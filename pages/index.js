@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Heading } from "@/components/common";
+import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
-import styled from "styled-components";
+import { Heading } from "@/components/common";
 
 export default function HomePage({ props }) {
   return (
-    <Layout>
-      <Heading className="h1 center">Welcome</Heading>
+    <Layout title="Tronion | Home">
+      <Hero />
     </Layout>
   );
 }

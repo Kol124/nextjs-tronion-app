@@ -2,9 +2,9 @@ import Image from "next/image";
 import styled from "styled-components";
 import { Heading, Line } from "@/components/common";
 
-export const AirdropForm = ({ image, children }) => {
+export const AirdropForm = ({ image, children, margin }) => {
   return (
-    <AirdropContainer>
+    <AirdropContainer className={margin && "margin-left"}>
       <FormHeader>
         <ImageWrapper>
           <Image
@@ -34,7 +34,7 @@ export const AirdropForm = ({ image, children }) => {
 };
 
 export const AirdropContainer = styled.div`
-  margin-left: 30%;
+  margin: 0 auto;
   max-width: 540px;
   border-radius: 20px;
   padding: 3rem 3.5rem;
@@ -42,8 +42,6 @@ export const AirdropContainer = styled.div`
   background: ${(p) => p.theme.backgroundPrimary};
 
   @media only screen and (max-width: 1024px) {
-    margin-left: auto;
-    margin-right: auto;
     padding: 2.5rem 2.5rem 3rem;
   }
 
@@ -84,5 +82,6 @@ const HeaderText = styled.div`
 `;
 
 AirdropForm.defaultProps = {
+  margin: false,
   image: "/images/balloons.png",
 };

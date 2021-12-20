@@ -6,7 +6,7 @@ export default function ICO() {
   return (
     <Layout title="Dashboard | ICO">
       <DashboardSidebar />
-      <Countdown />
+      <Countdown margin={true} />
     </Layout>
   );
 }

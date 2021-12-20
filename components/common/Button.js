@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
+  color: #fff;
   border: none;
   font: inherit;
-  color: #f9f9f9;
   border-radius: 50px;
-  background: inherit;
   transition: all 0.3s ease;
-  background: #494850;
+  background: linear-gradient(
+    269.97deg,
+    #00ff75 -0.9%,
+    rgba(0, 0, 0, 0) 366.34%
+  );
   padding: 4px 20px;
   cursor: pointer;
   outline: none;

@@ -13,7 +13,7 @@ export default function Airdrop() {
   return (
     <Layout title="Dashboard | Airdrop">
       <DashboardSidebar />
-      <AirdropForm>
+      <AirdropForm margin={true}>
         <form>
           <InputContainer>
             <InputEmailIcon />

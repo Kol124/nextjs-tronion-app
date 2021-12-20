@@ -2,9 +2,9 @@ import Image from "next/image";
 import styled from "styled-components";
 import { Heading, Button } from "./common";
 
-export const Countdown = ({ image, time, total }) => {
+export const Countdown = ({ image, time, total, margin }) => {
   return (
-    <CountdownConatiner>
+    <CountdownContainer className={margin && "margin-left"}>
       <Top>
         <ImageWrapper>
           <Image
@@ -49,12 +49,13 @@ export const Countdown = ({ image, time, total }) => {
         {total}
       </Heading>
       <Button>Buy Tronion</Button>
-    </CountdownConatiner>
+    </CountdownContainer>
   );
 };
 
-const CountdownConatiner = styled.div`
-  margin-left: 30%;
+const CountdownContainer = styled.div`
+  margin: 0 auto;
+  flex-basis: 50%;
   max-width: 575px;
   border-radius: 20px;
   padding: 3rem 3.5rem;
@@ -68,8 +69,6 @@ const CountdownConatiner = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-    margin-left: auto;
-    margin-right: auto;
     padding: 2.5rem 2.5rem;
   }
 
@@ -154,6 +153,7 @@ const LoadingBar = styled.div`
 `;
 
 Countdown.defaultProps = {
+  margin: false,
   image: "/images/tronion-logo.png",
   time: { days: 90, hours: 1, minutes: 18, seconds: 30 },
   total: 2811,

@@ -31,17 +31,19 @@ export default function Layout({ title, keywords, description, children }) {
       <Body>
         <Header />
         <Container>{children}</Container>
-        {router.pathname !== "/" && (
-          <Radial>
-            <Image
-              src="/images/radial-bg.png"
-              alt="Radial Overlay"
-              objectFit="contain"
-              width={904}
-              height={648}
-            />
-          </Radial>
-        )}
+        <Radial className={router.pathname == "/" ? "top-right" : ""}>
+          <Image
+            src={
+              router.pathname == "/"
+                ? "/images/radial-home.png"
+                : "/images/radial-bg.png"
+            }
+            alt="Radial Overlay"
+            objectFit="cover"
+            width={router.pathname == "/" ? 1200 : 904}
+            height={648}
+          />
+        </Radial>
         <Footer>
           See our milestone for use cases, as we plan to reach 1USD per Tronion
           token

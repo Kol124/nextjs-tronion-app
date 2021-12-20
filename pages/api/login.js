@@ -7,19 +7,21 @@ const login = async (req, res) => {
     console.log(req.body);
     const { email, password } = req.body;
     let query = { email: email };
-    User.findOne(query, function(err, user) {
+
+    User.findOne(query, function (err, user) {
       if (err) throw [err];
       if (!user) {
-        //console.log("no user found")
         return res.status(422).send({ message: "No user found" });
       }
+
       if (password === user.password) {
         res.status(200).send({ user });
       } else {
         res.status(422).send({ message: "invalid credentials" });
       }
+
       // Match Password
-      bcrypt.compare(password, user.password, function(err, isMatch) {
+      bcrypt.compare(password, user.password, function (err, isMatch) {
         if (err) throw [err];
         if (isMatch) {
           //console.log("user :",user)

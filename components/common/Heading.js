@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const Heading = styled.h2`
   font-weight: 400;
 
+  &.hero {
+    font-size: 60px;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 35px;
+    }
+  }
+
   &.h1 {
     font-size: 44px;
 
@@ -49,5 +57,13 @@ export const Heading = styled.h2`
 
   &.right {
     text-align: right;
+  }
+
+  &.grey {
+    color: #a2a2a4;
+  }
+
+  &.lh-sm {
+    line-height: 1.2;
   }
 `;

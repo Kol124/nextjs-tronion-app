@@ -7,6 +7,7 @@ const signup = async (req, res) => {
     console.log(req.body);
     // Check if userName, email or password is provided
     const { userName, email, password } = req.body;
+
     if (userName && email && password) {
       try {
         // Hash password to store it in DB
@@ -15,6 +16,7 @@ const signup = async (req, res) => {
           email,
           password,
         });
+
         // Create new user
         var usercreated = await user.save();
         return res.status(200).send({ user: usercreated });

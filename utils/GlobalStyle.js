@@ -30,6 +30,15 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 22px;
   }
 
+  .margin-left {
+    margin-left: 30%;
+
+    @media only screen and (max-width: 1024px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   /* ============= MARGINS ============= */
   /* X and Y */
   .u-margin-large {
