@@ -1,10 +1,10 @@
-import Head from "next/head";
+import { useRouter } from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Radial } from "./common";
 import styled from "styled-components";
-import { useRouter } from "next/router";
 
 export default function Layout({ title, keywords, description, children }) {
   const router = useRouter();

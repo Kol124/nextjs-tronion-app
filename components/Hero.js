@@ -39,6 +39,10 @@ const HeroText = styled.div`
   span {
     margin-left: 1.8rem;
   }
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 Hero.defaultProps = {
